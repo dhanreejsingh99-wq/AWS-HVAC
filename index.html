@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <title>AWS HVAC | Heating & Cooling Services</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
@@ -11,20 +9,20 @@
 body{
 margin:0;
 font-family:Arial;
-background:#f4f6f8;
+background:#f4f6f9;
 }
 
 header{
-background:#0b3d91;
+background:#0c3c91;
 color:white;
-padding:25px;
-text-align:center;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-nav{
-background:#1f5ed6;
-padding:15px;
-text-align:center;
+header h1{
+margin:0;
 }
 
 nav a{
@@ -36,51 +34,51 @@ font-weight:bold;
 
 .hero{
 background:url("https://images.unsplash.com/photo-1581093458791-9d42e9a1c89c") center/cover;
-height:400px;
-color:white;
+height:500px;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
+color:white;
+text-align:center;
 text-shadow:2px 2px 6px black;
 }
 
-.hero h1{
+.hero h2{
 font-size:50px;
 }
 
-.button{
-background:#ff7b00;
-color:white;
+.cta{
+background:#ff7a00;
 padding:15px 25px;
+color:white;
 text-decoration:none;
-border-radius:5px;
 font-weight:bold;
+border-radius:5px;
 }
 
-.services{
-padding:50px;
+.section{
+padding:60px;
 text-align:center;
 }
 
-.service-grid{
+.services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
-margin-top:30px;
+margin-top:40px;
 }
 
-.service-box{
+.box{
 background:white;
-padding:20px;
+padding:25px;
 border-radius:8px;
 box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
 .booking{
-background:#eaf1ff;
+background:#e8efff;
 padding:50px;
-text-align:center;
 }
 
 input,select{
@@ -89,27 +87,34 @@ margin:10px;
 width:250px;
 }
 
-footer{
-background:#0b3d91;
+button{
+padding:14px 25px;
+background:#ff7a00;
 color:white;
-text-align:center;
-padding:20px;
-margin-top:40px;
+border:none;
+font-weight:bold;
 }
 
-.emergency{
+footer{
+background:#0c3c91;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+.callbtn{
 position:fixed;
 bottom:20px;
 right:20px;
 background:red;
 color:white;
 padding:15px 20px;
-border-radius:50px;
+border-radius:40px;
 font-weight:bold;
+text-decoration:none;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -118,12 +123,6 @@ font-weight:bold;
 
 <h1>AWS HVAC</h1>
 
-<p>Heating • Cooling • Boilers • Tankless Systems</p>
-
-<p>Call: 519-500-5649</p>
-
-</header>
-
 <nav>
 
 <a href="#">Home</a>
@@ -131,54 +130,54 @@ font-weight:bold;
 <a href="#booking">Book Service</a>
 <a href="#tips">HVAC Tips</a>
 
-<a href="https://g.page/r/C" target="_blank">Google Reviews</a>
-
 </nav>
+
+</header>
 
 <div class="hero">
 
-<h1>$99 HVAC Diagnostic</h1>
+<h2>$99 HVAC Diagnostic</h2>
 
 <p>Furnace • AC • Boilers • Tankless Systems</p>
 
-<a class="button" href="#booking">Book Appointment</a>
+<a class="cta" href="#booking">Book Appointment</a>
 
 </div>
 
-<section id="services" class="services">
+<section id="services" class="section">
 
-<h2>Our Services</h2>
+<h2>Our HVAC Services</h2>
 
-<div class="service-grid">
+<div class="services">
 
-<div class="service-box">
+<div class="box">
 <h3>Furnace Service</h3>
 <p>Repair and diagnostics for all furnace brands.</p>
 </div>
 
-<div class="service-box">
-<h3>Air Conditioner</h3>
+<div class="box">
+<h3>Air Conditioning</h3>
 <p>AC repair and maintenance.</p>
 </div>
 
-<div class="service-box">
+<div class="box">
 <h3>Boilers</h3>
 <p>Hot water and hydronic boiler systems.</p>
 </div>
 
-<div class="service-box">
+<div class="box">
 <h3>Tankless Water Heater</h3>
 <p>Service and diagnostics.</p>
 </div>
 
-<div class="service-box">
-<h3>Radiators</h3>
-<p>Heating system troubleshooting.</p>
-</div>
-
-<div class="service-box">
+<div class="box">
 <h3>Ductless AC</h3>
 <p>Mini split installation and repair.</p>
+</div>
+
+<div class="box">
+<h3>Annual Maintenance</h3>
+<p>Preventative HVAC system maintenance.</p>
 </div>
 
 </div>
@@ -187,9 +186,9 @@ font-weight:bold;
 
 <section id="booking" class="booking">
 
-<h2>Book HVAC Diagnostic ($99)</h2>
+<h2>Book HVAC Service ($99 Diagnostic)</h2>
 
-<form action="mailto:aws.hvac@email.com" method="post">
+<form>
 
 <input type="text" placeholder="Full Name" required><br>
 
@@ -200,16 +199,11 @@ font-weight:bold;
 <select>
 
 <option>System Type (Optional)</option>
-
 <option>Furnace</option>
-
-<option>Air Conditioner</option>
-
+<option>AC</option>
 <option>Boiler</option>
-
-<option>Tankless Water Heater</option>
-
-<option>Ductless AC</option>
+<option>Tankless</option>
+<option>Ductless</option>
 
 </select>
 
@@ -218,64 +212,64 @@ font-weight:bold;
 <select>
 
 <option>Service Type</option>
-
 <option>$99 Diagnostic</option>
-
 <option>Annual Maintenance</option>
 
 </select>
 
 <br><br>
 
-<button class="button">Submit Booking</button>
+<button>Submit Booking</button>
 
 </form>
 
 </section>
 
-<section id="tips" class="services">
+<section id="tips" class="section">
 
 <h2>HVAC Maintenance Tips</h2>
 
-<div class="service-grid">
+<div class="services">
 
-<div class="service-box">
+<div class="box">
 <h3>Check Furnace Filter</h3>
-<p>Replace every 1-3 months to keep airflow strong.</p>
+<p>Replace your furnace filter every 1–3 months.</p>
 </div>
 
-<div class="service-box">
-<h3>Thermostat Battery</h3>
-<p>Replace batteries before winter and summer.</p>
+<div class="box">
+<h3>Check Thermostat Battery</h3>
+<p>Low batteries can stop your HVAC from running.</p>
 </div>
 
-<div class="service-box">
+<div class="box">
 <h3>Check Breaker</h3>
-<p>Ensure furnace or AC breaker has not tripped.</p>
+<p>Make sure your furnace or AC breaker hasn't tripped.</p>
 </div>
 
-<div class="service-box">
+<div class="box">
 <h3>Clear Exhaust Vents</h3>
-<p>Make sure snow or debris is not blocking vents.</p>
+<p>Ensure snow or debris is not blocking exhaust vents.</p>
 </div>
 
 </div>
 
 </section>
 
-<a class="emergency" href="tel:15195005649">
+<a class="callbtn" href="tel:15195005649">
 
-Emergency Call
+Emergency Call 519-500-5649
 
 </a>
 
 <footer>
 
-<p>AWS HVAC | Heating & Cooling</p>
+<h3>AWS HVAC</h3>
 
-<p>Serving Ontario</p>
+<p>Heating • Cooling • Boilers • Tankless Systems</p>
 
 <p>Phone: 519-500-5649</p>
+
+<p>$99 Diagnostic Service</p>
 
 </footer>
 
